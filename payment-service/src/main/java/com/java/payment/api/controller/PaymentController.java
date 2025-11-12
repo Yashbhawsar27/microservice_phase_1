@@ -11,15 +11,14 @@ import com.java.payment.api.service.PaymentService;
 
 @RestController
 @RequestMapping("/payment")
-
 public class PaymentController {
 
 	@Autowired
 	private PaymentService service;
 
 	@PostMapping("/doPayment")
-	public Payment doPayment(@RequestBody Payment payemnt) {
-		return service.doPayment(payemnt);
+	public Payment doPayment(@RequestBody Payment payment) {
+		return service.doPayment(payment);
 	}
 
 }
